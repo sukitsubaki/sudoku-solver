@@ -1,41 +1,87 @@
 body { 
     font-family: Trebuchet MS, sans-serif; 
-    text-align: center; 
+    text-align: center;
+    background-color: mintcream;
+    color: #282828;
 }
 
 .grid { 
     display: grid; 
-    grid-template-columns: repeat(9, 40px); 
+    grid-template-columns: repeat(9, 52px); 
+    grid-template-rows: repeat(9, 52px); 
     gap: 0px; 
     justify-content: center; 
+    margin: 20px auto;
 }
 
 input { 
-    width: 38px; 
-    height: 38px; 
+    width: 50px; 
+    height: 50px; 
     text-align: center; 
     font-size: 18px;
     border: 1px solid #282828;
+    box-sizing: border-box;
 }
 
-button { 
-    margin: 10px; 
-    padding: 10px; 
-    font-size: 16px; 
+.grid input:nth-child(3n) {
+    border-right: 2px solid #282828;
 }
 
-input:nth-child(3n) {
-    border-right: 2px solid black;
-}
-input:nth-child(27n + 1) {
-    border-left: 2px solid black;
-}
-
-input:nth-child(n + 19):nth-child(-n + 27),
-input:nth-child(n + 46):nth-child(-n + 54) {
-    border-bottom: 2px solid black;
+.grid input:nth-child(n+19):nth-child(-n+27),
+.grid input:nth-child(n+46):nth-child(-n+54),
+.grid input:nth-child(n+73):nth-child(-n+81) {
+    border-bottom: 2px solid #282828;
 }
 
-input:nth-child(n + 1):nth-child(-n + 9) {
-    border-top: 2px solid black;
+.grid input:nth-child(1), .grid input:nth-child(4), .grid input:nth-child(7),
+.grid input:nth-child(10), .grid input:nth-child(13), .grid input:nth-child(16),
+.grid input:nth-child(19), .grid input:nth-child(22), .grid input:nth-child(25),
+.grid input:nth-child(28), .grid input:nth-child(31), .grid input:nth-child(34),
+.grid input:nth-child(37), .grid input:nth-child(40), .grid input:nth-child(43),
+.grid input:nth-child(46), .grid input:nth-child(49), .grid input:nth-child(52),
+.grid input:nth-child(55), .grid input:nth-child(58), .grid input:nth-child(61),
+.grid input:nth-child(64), .grid input:nth-child(67), .grid input:nth-child(70),
+.grid input:nth-child(73), .grid input:nth-child(76), .grid input:nth-child(79) {
+    border-left: 2px solid #282828;
+}
+
+.grid input:nth-child(-n+9) {
+    border-top: 2px solid #282828;
+}
+
+.grid input:nth-child(n+28):nth-child(-n+36),
+.grid input:nth-child(n+55):nth-child(-n+63) {
+    border-top: 2px solid #282828;
+}
+
+.button-container {
+    width: 468px;
+    margin: 10px auto;
+}
+
+button {
+    font-family: Trebuchet MS, sans-serif; 
+    width: 100%;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: darkcyan;
+}
+
+.feet {
+    padding-top: 10px;
+    font-size: 0.8em;
+}
+
+.feet a {
+    color: darkcyan;
+    text-decoration: none;
+    font-weight: bolder;
 }
